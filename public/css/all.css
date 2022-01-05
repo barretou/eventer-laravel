@@ -1,0 +1,18 @@
+.logo-barra {
+  width: 4rem;
+  padding: 0.5rem;
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=all.css.map*/

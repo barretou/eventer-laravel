@@ -1,17 +1,60 @@
 const mix = require('laravel-mix');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel applications. By default, we are compiling the CSS
- | file for the application as well as bundling up all the JS files.
- |
- */
+mix
+  .webpackConfig({
+    devtool: "source-map"
+  })
+  
+  /**
+   * Arquivos de estilo de bibliotecas
+   * Todos os arquivos serão compiladas para o arquivo bundle.css na /public
+   */
+  .styles([
+      // Insira os caminhos das bibliotecas que usará abaixo...
+      // 'node_modules/bootstrap/dist/css/bootstrap.min.css',
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+    ], 'public/css/bundle.css'
+  )
+
+
+
+  /**
+   * Scripts de bibliotecas
+   * Todos os arquivos serão compiladas para o arquivo bundle.css na /public
+   */
+  .scripts([
+    // Insira os caminhos das bibliotecas que usará abaixo...
+    // 'node_modules/bootstrap/dist/js/bootstrap.min.js',
+
+  ], 'public/js/bundle.js')
+  
+  
+  
+  /**
+   * Compilação do arquivo de estilo principal para a /public
+   */
+  .sass('resources/sass/main.scss', 'public/css/all.css')
+  .options({
+    autoprefixer: {
+      options: {
+        browsers: [ 'last 40 versions' ],
+        grid: true
+      }
+    }
+  })
+  
+  
+  
+  /**
+   * Compilação do arquivo de scripts principal para a /public
+   */
+  .js('resources/js/site.js', 'public/js/all.js')
+
+
+  /**
+   * Gera os arquivos de mapa
+   */
+  .sourceMaps()
+
+
+  .browserSync('http://127.0.0.1:8000/');
