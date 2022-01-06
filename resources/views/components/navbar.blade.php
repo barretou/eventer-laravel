@@ -1,36 +1,20 @@
-<nav class="uk-navbar-container" uk-navbar>
-    <div class="uk-navbar-left">
-        <a href="/">
-            <div class="logo-wrapper">
-                <div class="logo-barra">
-                    <img src="/img/evento.png" alt="">
-                </div>
-                <h3>Eventer</h3>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand logo-wrapper" href="#">
+            <div class="logo-barra">
+                <img src="/img/evento.png" alt="">
             </div>
         </a>
-        <ul class="uk-navbar-nav">
-            <li class="uk-active">
-                <a href="#">
-                    Active
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    Parent
-                </a>
-                <div class="uk-navbar-dropdown">
-                    <ul class="uk-nav uk-navbar-dropdown-nav">
-                        <li class="uk-active"><a href="#">Active</a></li>
-                        <li><a href="#">Item</a></li>
-                        <li><a href="#">Item</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <a href="#">
-                    Item
-                </a>
-            </li>
-        </ul>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Pricing</a>
+            </div>
+        </div>
     </div>
 </nav>
