@@ -1,9 +1,9 @@
 @extends('layouts.main')
-@section('title', 'Eventer - Home')
+@section('title', 'Eventer - Contato')
 @section('content')
 
 <div class="container">
-    <h1>Homepage</h1>
+    <h1>Contato</h1>
 </div>
     
 
